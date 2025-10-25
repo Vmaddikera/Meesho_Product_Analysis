@@ -128,9 +128,9 @@ openpyxl >= 3.0.0
 ```bash
 python real_data_analysis.py
 ```
-Generates: Excel report + main visualization
 
 ### **Run Return Percentage Analysis**
 ```bash
 python return_percentage_plots.py
 ```
+
