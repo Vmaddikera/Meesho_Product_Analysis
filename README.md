@@ -1,7 +1,5 @@
 # Meesho Sales Data Analysis
 
-![Return Percentage Analysis](return_percentage_analysis.png)
-![Stacked Bar Analysis](stacked_bar_analysis.png)
 
 Real data analysis of Meesho sales with NLP product categorization and return rate analysis. This project analyzes 133 merged records from Meesho's sales data to understand return patterns, product performance, and business insights.
 
@@ -166,4 +164,5 @@ openpyxl >= 3.0.0
 - **Return Analysis:** `return_percentage_analysis.png` (return percentage charts)
 - **Stacked Charts:** `stacked_bar_analysis.png` (orders vs returns visualization)
 - **Console Output:** Detailed statistics and business insights
+
 
