@@ -1,6 +1,9 @@
 # Meesho Sales Data Analysis
 
-Real data analysis of Meesho sales with NLP product categorization and return rate analysis.
+![Return Percentage Analysis](return_percentage_analysis.png)
+![Stacked Bar Analysis](stacked_bar_analysis.png)
+
+Real data analysis of Meesho sales with NLP product categorization and return rate analysis. This project analyzes 133 merged records from Meesho's sales data to understand return patterns, product performance, and business insights.
 
 ##  Quick Start
 
@@ -74,68 +77,93 @@ python stacked_bar_analysis.py
 - Return percentage: ~10-20 seconds  
 - Stacked bar analysis: ~15-30 seconds
 
-##  Files
-
-### **Core Scripts**
-- `real_data_analysis.py` - Main analysis with NLP categorization
-- `return_percentage_plots.py` - Return percentage charts
-- `stacked_bar_analysis.py` - Stacked bar charts (orders vs returns)
-
-### **Data**
-- `meesho ForwardReports.csv` - Forward reports (138 records)
-- `meesho Orders Aug.csv` - Orders data (208 records)
-- `meesho_analysis_results.xlsx` - Excel output (4 sheets)
-
-### **Output**
-- `real_meesho_data_analysis.png` - Main dashboard
-- `return_percentage_analysis.png` - Return percentage charts
-- `stacked_bar_analysis.png` - Stacked bar charts
-
-##  Analysis Features
-
-### **Data Processing**
-- Merges 2 CSV files → 133 records
-- NLP product categorization (6 categories)
-- Return rate calculations
-
-### **Visualizations**
-- **Stacked Bars:** Total orders vs returns
-- **Return Percentages:** % of total returns by category/price range
-- **Meesho Branding:** Purple (#580b48) & Yellow (#FFA500)
-
-### **Excel Output**
-- Category Analysis
-- Price Range Analysis  
-- Summary Statistics
-- Product Categories (all products with categories)
-
-##  Key Insights
-
-- Return rates by product category
-- Return patterns by price range
-- Percentage of total returns
-- Product categorization accuracy
-
-##  Requirements
+##  Project Structure
 
 ```
-pandas
-matplotlib
-seaborn
-plotly
-openpyxl
+Meesho_Product_Analysis/
+├── real_data_analysis.py              
+├── return_percentage_plots.py         
+├── stacked_bar_analysis.py            
+├── README.md                          
+├── requirements.txt                   
+├── meesho ForwardReports.csv          
+├── meesho Orders Aug.csv              
+├── meesho_analysis_results.xlsx       
+├── real_meesho_data_analysis.png
+├── return_percentage_analysis.png      
+└── stacked_bar_analysis.png           
+```
+
+##  Analysis Results
+
+
+### **Return Percentage Analysis**
+![Return Percentage](return_percentage_analysis.png)
+- **Percentage of Total Returns:** Shows what % of all returns each category represents
+- **Return Distribution:** Clear visualization of return patterns
+- **Business Insights:** Identify high-return categories and price ranges
+
+### **Stacked Bar Analysis**
+![Stacked Bar Charts](stacked_bar_analysis.png)
+- **Orders vs Returns:** Visual comparison of total orders vs returns
+- **Category Breakdown:** Stacked bars showing delivered vs returned orders
+- **Price Range Analysis:** Return patterns across different price segments
+
+##  Technical Features
+
+### **Data Processing**
+- **Data Merging:** 
+- **NLP Categorization:** 
+- **Return Analysis:** 
+
+### **NLP Product Categorization**
+- **6 Categories:** Ethnic Wear, Western Wear, Beauty & Grooming, Accessories, Home & Living, Electronics
+- **100+ Keywords:** Advanced keyword matching for accurate classification
+- **Smart Classification:** Products assigned to categories with highest match scores
+
+### **Visualizations**
+- **Stacked Bar Charts:** Total orders vs returns with clear visual separation
+- **Return Percentage Charts:** % of total returns by category/price range
+- **Meesho Branding:** Professional styling with brand colors (#580b48 purple, #FFA500 yellow)
+- **Clean Design:** No grid lines, professional appearance
+
+### **Excel Output (4 Sheets)**
+- **Category_Analysis:** Return rates and percentages by product category
+- **Price_Range_Analysis:** Return analysis by price ranges
+- **Summary:** Overall statistics and metrics
+- **Product_Categories:** All products with their assigned categories
+
+##  Key Insights Generated
+
+- **Return Rate Analysis:** Which categories have highest return rates
+- **Price Range Patterns:** Return patterns across different price segments
+- **Percentage Distribution:** What % of total returns each category represents
+- **Product Performance:** Category-wise order and return statistics
+- **Business Intelligence:** Actionable insights for business decisions
+
+##  Dependencies
+
+```
+pandas >= 1.5.0
+matplotlib >= 3.5.0
+seaborn >= 0.11.0
+plotly >= 5.0.0
+openpyxl >= 3.0.0
 ```
 
 ##  Technical Workflow
 
-1. **Load & Merge Data** - CSV files → 133 merged records
-2. **NLP Categorization** - 6 categories using keyword matching
-3. **Statistical Analysis** - Return rates and percentages
-4. **Visualization** - Stacked bars and percentage charts
-5. **Excel Export** - Comprehensive 4-sheet report
+1. **Data Loading & Merging** - CSV files → 133 merged records with 19 columns
+2. **Data Preprocessing** - Clean product names, create return flags, handle missing values
+3. **NLP Categorization** - Apply keyword matching across 6 product categories
+4. **Statistical Analysis** - Calculate return rates, percentages, and distributions
+5. **Visualization & Export** - Generate professional charts and comprehensive Excel report
 
 ##  Output Files
 
-- **Excel:** `meesho_analysis_results.xlsx` (4 sheets)
-- **Charts:** PNG files with Meesho branding
-- **Console:** Detailed statistics and insights
+- **Excel Report:** `meesho_analysis_results.xlsx` (4 comprehensive sheets)
+- **Main Dashboard:** `real_meesho_data_analysis.png` (category and price range analysis)
+- **Return Analysis:** `return_percentage_analysis.png` (return percentage charts)
+- **Stacked Charts:** `stacked_bar_analysis.png` (orders vs returns visualization)
+- **Console Output:** Detailed statistics and business insights
+
